@@ -1,0 +1,10 @@
+# !/bin/bash
+#
+# Authors:
+# Bastian Durand 329735
+# Michel Sommer 273966
+# Date 2022-11-15
+#
+sudo chmod a+rwx Server.js
+sudo chmod a+rwx Greenhouse
+echo init ok
