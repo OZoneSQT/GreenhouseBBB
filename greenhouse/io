@@ -1,0 +1,27 @@
+HIH8120 Temperature and humidity, I2C
+P9_1	        GND	        Black
+P9_4	        3.3V	    White
+P9_19	gpio13  SDA	        Yellow
+P9_20	gpio12  SDL	        Green
+
+Light Control with PWM
+P9_1	        GND	        Black
+P9_7	        sys 5V	    Red
+P9_22	gpio2   PMW	        Brown
+
+Servo motor control with PWM
+P9_1	        GND	        Black
+P9_7	        5V	        Red
+P9_21	gpio3   PMW	        Gray
+
+Light measurement with ADC
+P9_1	        GND	        Black
+P9_7	        5V	        Red
+P9_32	        1.8V ref.	Orange
+P9_34	        GND ADC	    Black
+P9_39	AIN0    ADC	        Blue
+
+Heater control with IO
+P9_1	        GND	        Black
+P9_7	        5V	        Red
+P9_23   gpio49	IO	        Purple
