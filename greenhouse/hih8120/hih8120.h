@@ -27,7 +27,7 @@ namespace greenhouse {
         float map14bitValueTemperature(unsigned int value);
 
     public:
-        hih8120(unsigned int I2CBus, unsigned int I2CAddress=0x53);
+        hih8120(unsigned int I2CBus, unsigned int I2CAddress=HIH8120_ADDRESS);
         void readCurrentTemperatureHumidity();
 
     };

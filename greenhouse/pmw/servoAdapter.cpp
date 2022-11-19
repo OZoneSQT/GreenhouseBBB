@@ -9,7 +9,7 @@
 
 namespace greenhouse {
 
-#define SERVOCHANNEL 1
+
 
     void servoAdapter::openWindow() {
         controlServo("open");
@@ -27,11 +27,11 @@ namespace greenhouse {
         pwm pwm_servo;
 
         if (i == "open") {
-            pwm_servo.send_pwm(2000000, 20000000, SERVOCHANNEL);
+            pwm_servo.send_pwm(2000000, 20000000, PWM_CHANNEL_B);
         } else if (i == "half") {
-            pwm_servo.send_pwm(1500000, 20000000, SERVOCHANNEL);
+            pwm_servo.send_pwm(1500000, 20000000, PWM_CHANNEL_B);
         } else if (i == "close") {
-            pwm_servo.send_pwm(1000000, 20000000, SERVOCHANNEL);
+            pwm_servo.send_pwm(1000000, 20000000, PWM_CHANNEL_B);
         }
     }
 
@@ -44,7 +44,7 @@ namespace greenhouse {
      * value == 1000000 Window is closed
      */
     void servoAdapter::readWindowPos() {
-        std::string wpos = readFile("/sys/class/pwm/pwmchip1/pwm-1:0/duty_cycle");
+        std::string wpos = readFile("/sys/class/pwm/pwmchip" + PWM_CHIP + "/pwm-" + PWM_CHIP + ":" + PWM_CHANNEL_B + "/duty_cycle");
         if (wpos.compare("2000000") == 0) {
             std::cout << "Window:      open" << "     " << std::endl;
         } else if (wpos.compare("1500000") == 0) {

@@ -25,7 +25,7 @@ namespace greenhouse {
     void readAnalog(int adcPin)
     {
         stringstream ss;
-        ss << LDR_PATH << adcPin << "_raw";
+        ss << ADC_PIN_PATH << adcPin << "_raw";
         fstream fs;
         fs.open(ss.str().c_str(), fstream::in);
         fs >> adcPin;

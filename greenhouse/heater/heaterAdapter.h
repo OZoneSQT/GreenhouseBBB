@@ -14,7 +14,6 @@ namespace greenhouse {
     private:
 
     public:
-        void init();
         void on();
         void off();
         void isRunning();

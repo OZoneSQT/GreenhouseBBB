@@ -70,7 +70,7 @@ namespace greenhouse {
     // for user readable one. Multiply by 10 and divide by 10 to specify decimal numbers after '.'
     float hih8120::map14bitValueHumidity(unsigned int value)
     {
-        // Rrounds the value to single decimal
+        // Rounds the value to single decimal
         return floor((value/16383.0 * 100.0) * 10) / 10;
     }
 

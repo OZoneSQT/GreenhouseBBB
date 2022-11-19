@@ -4,10 +4,11 @@
  * @date 18-11-2022
  */
 
-#include "hih8120/hih8120.h"
-#include "ldr/ldr.h"
-#include "pwm/pwm.h"
-#include "heater/heater.h"
+#include "hih8120/temperatureHumidityAdapter.h"
+#include "ldr/ldrAdapter.h"
+#include "pwm/lightAdapter.h"
+#include "pwm/servoAdapter.h"
+#include "heater/heaterAdapter.h"
 #include <iostream>
 
 /**
@@ -47,55 +48,103 @@ int main(int argc, char **argv) {
                       << "readHeater - reads status,on or off ." << std::endl
                       << "setHeaterStatus - controls heater in greenhouse.Params on or off ." << std::endl;
 
-        } else if (std::string(argv[1]) == "readTempAndHumidity") {
-
-            printTemperatureAndHumidity();
-
-        } else if (std::string(argv[1]) == "readTemp") {
-
-            printTemperature();
-
-        } else if (std::string(argv[1]) == "readHumidity") {
-
-            printHumidity();
-
-        } else if (std::string(argv[1]) == "readLightLevel") {
-
-            printLightLevel();
-
-        }else if(std::string(argv[1]) == "setLedLight"){
-
-            controlLightIntensity(atoi(argv[2]));
-
-        } else if (std::string(argv[1]) == "readLedLight") {
-
-            readLightIntensity();
-
-        }else if(std::string(argv[1]) == "setWindowStatus"){
-
-            controlServo(argv[2]);
-
-        }else if(std::string(argv[1]) == "readWindow"){
-
-            readWindowPos();
-
-        }else if(std::string(argv[1]) == "setHeaterStatus"){
-
-            heaterOnOff(argv[2]);
-
-        } else if (std::string(argv[1]) == "readHeater") {
-
-            readHeater();
-
-        } else {
-
-            std::cout << "Argument unrecognized see --help" << std::endl;
-
         }
-    } else {
 
+        // hih8120
+        else if (std::string(argv[1]) == "readTempAndHumidity")
+        {
+            greenhouse::temperatureHumidityAdapter temperatureHumidity;
+            temperatureHumidity.printTemperatureAndHumidity();
+        }
+        else if (std::string(argv[1]) == "readTemp") {
+            greenhouse::temperatureHumidityAdapter temperatureHumidity;
+            temperatureHumidity.printTemperature();
+        }
+        else if (std::string(argv[1]) == "readHumidity")
+        {
+            greenhouse::temperatureHumidityAdapter temperatureHumidity;
+            temperatureHumidity.printHumidity();
+        }
+
+        // ldr
+        else if (std::string(argv[1]) == "readLightLevel")
+        {
+            greenhouse::ldrAdapter ldr;
+            ldr.printLightLevel();
+        }
+
+        // pwm, light
+        else if(std::string(argv[1]) == "setLedLight")
+        {
+            greenhouse::lightAdapter light;
+            light.controlLightIntensity(atoi(argv[2]));
+        }
+        else if (std::string(argv[1]) == "readLedLight") {
+            greenhouse::lightAdapter light;
+            light.readLightIntensity();
+        }
+
+        // pwm, servo
+        else if(std::string(argv[1]) == "setWindowStatus")
+        {
+            if (argv[2] == "open")
+            {
+                greenhouse::servoAdapter servo;
+                servo.openWindow();
+            }
+            else if (argv[2] == "half")
+            {
+                greenhouse::servoAdapter servo;
+                servo.halfOpenWindow();
+            }
+            else if (argv[2] == "close")
+            {
+                greenhouse::servoAdapter servo;
+                servo.closeWindow();
+            }
+            else
+            {
+                std::cout << "Argument unrecognized see --help" << std::endl;
+            }
+        }
+        else if(std::string(argv[1]) == "readWindow")
+        {
+            greenhouse::servoAdapter servo;
+            servo.readWindowPos();
+        }
+
+        // heater
+        else if(std::string(argv[1]) == "setHeaterStatus")
+        {
+            if (argv[2] == "on")
+            {
+                greenhouse::heaterAdapter heater;
+                servo.on();
+            }
+            else if (argv[2] == "off")
+            {
+                greenhouse::heaterAdapter heater;
+                heater.off();
+            }
+            else
+            {
+                std::cout << "Argument unrecognized see --help" << std::endl;
+            }
+        }
+        else if (std::string(argv[1]) == "readHeater")
+        {
+            greenhouse::heaterAdapter heater;
+            heater.isRunning();
+        }
+
+        else
+        {
+            std::cout << "Argument unrecognized see --help" << std::endl;
+        }
+    }
+    else
+    {
         std::cout << "No arguments unrecognized see --help" << std::endl;
-
     }
 
     return 0;

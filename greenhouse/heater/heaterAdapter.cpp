@@ -10,14 +10,6 @@
 namespace greenhouse {
 
     /**
-     * @brief init adapter
-     */
-    void heaterAdapter::init()
-    {
-
-    }
-
-    /**
      * @brief Set heater to "on"
      */
     void heaterAdapter::on()

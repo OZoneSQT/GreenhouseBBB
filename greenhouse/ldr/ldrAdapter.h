@@ -7,8 +7,6 @@
 #ifndef GREENHOUSEBBB_LDRADAPTER_H
 #define GREENHOUSEBBB_LDRADAPTER_H
 
-#define LDR_PIN 2
-
 namespace greenhouse {
 
     class ldrAdapter {
@@ -16,7 +14,6 @@ namespace greenhouse {
     private:
 
     public:
-        init();
         printLightLevel();
     };
 

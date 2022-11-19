@@ -9,7 +9,7 @@
 // turn on heater by writing to gpio pin
 void heater::turnOnHeater()
 {
-    fs.open("/sys/class/gpio/gpio49/value", std::fstream::out);
+    fs.open("/sys/class/gpio/gpio" + HEATER_PIN + "/value", std::fstream::out);
     fs << 1;
     fs.close();
 }
@@ -17,7 +17,7 @@ void heater::turnOnHeater()
 // turn off heater by writing to gpio pin
 void heater::turnOffHeater()
 {
-    fs.open("/sys/class/gpio/gpio49/value", std::fstream::out);
+    fs.open("/sys/class/gpio/gpio" + HEATER_PIN + "/value", std::fstream::out);
     fs << 0;
     fs.close();
 }
@@ -26,9 +26,9 @@ void heater::turnOffHeater()
 void heater::readHeaterStatus()
 {
     struct stat st;
-    if (stat("/sys/class/gpio/gpio50", &st) == 0)
+    if (stat("/sys/class/gpio/gpio" + HEATER_PIN, &st) == 0)
     {
-        std::string val = readFile("/sys/class/gpio/gpio50/value");
+        std::string val = readFile("/sys/class/gpio/gpio" + HEATER_PIN + "/value");
         if(val[0] == '1')
         {
             std::cout << "Heater:      on" << "    " << std::endl;

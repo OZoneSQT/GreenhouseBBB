@@ -10,6 +10,7 @@
 namespace greenhouse {
 
     class temperatureHumidityAdapter {
+
     private:
 
     public:

@@ -9,8 +9,6 @@
 
 namespace greenhouse {
 
-#define LIGHTCHANNEL 0
-
     /**
      * @brief Control the light intensity of the led light
      *
@@ -19,7 +17,7 @@ namespace greenhouse {
     void pwmAdapter::controlLightIntensity(int i)
     {
         pwm pwm_led;
-        pwm_led.send_pwm_percentage(i, 20000000, LIGHTCHANNEL);
+        pwm_led.send_pwm_percentage(i, 20000000, PWM_CHANNEL_A);
     }
 
     /**
@@ -30,9 +28,8 @@ namespace greenhouse {
      */
     void pwmAdapter::readLightIntensity()
     {
-        std::string lightDuty = readFile("/sys/class/pwm/pwmchip1/pwm-1:1/duty_cycle");
+        std::string lightDuty = readFile("/sys/class/pwm/pwmchip" + PWM_CHIP + "/pwm-" + PWM_CHIP + ":" + PWM_CHANNEL_A + "/duty_cycle");
         std::cout << "Led light:   " + std::to_string(atoi(lightDuty.c_str()) / 200000)<< "     " << std::endl;
     }
-
 
 }
