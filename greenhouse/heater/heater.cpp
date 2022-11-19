@@ -4,9 +4,9 @@
  * @date 17-11-2022
  */
 
-#include "Heater.h"
+#include "heater.h"
 
-// function to turn on heater by writing to gpio pin
+// turn on heater by writing to gpio pin
 void heater::turnOnHeater()
 {
     fs.open("/sys/class/gpio/gpio49/value", std::fstream::out);
@@ -14,7 +14,7 @@ void heater::turnOnHeater()
     fs.close();
 }
 
-// function to turn off heater by writing to gpio pin
+// turn off heater by writing to gpio pin
 void heater::turnOffHeater()
 {
     fs.open("/sys/class/gpio/gpio49/value", std::fstream::out);

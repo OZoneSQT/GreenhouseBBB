@@ -7,33 +7,28 @@
 #ifndef GREENHOUSE_PWM_H
 #define GREENHOUSE_PWM_H
 
-#include "../I2CDevice.h"
+#include<iostream>
+#include<fstream>
+#include<string>
+#include<stdlib.h>
 
 namespace greenhouse {
 
-//Inherit from the i2c helper class
-    class hih8120: protected exploringBB::I2CDevice {
-
+    class pwm {
     public:
-        // class variables
-        unsigned int i2xc;
-        float temperature;
-        float humidity;
+        pwm()
+        {
+            system("config-pin P9_22 pwm"); // LED
+            system("config-pin P9_21 pwm"); // Servo motor
+        }
+
+        void send_pwm(int duty_cycle, int period, int channel);
+        void send_pwm_percentage(int percent, int period, int channel);
 
     private:
-        //Private functions and variables
-        unsigned int I2CBus, I2CAddress;
+        std::fstream fs;
+    };
 
-        float map14bitValueHumidity(unsigned int value);
-        float map14bitValueTemperature(unsigned int value);
+}
 
-    public:
-        //Functions for the user
-        hih8120(unsigned int I2CBus, unsigned int I2CAddress=0x53);
-        void readCurrentTemperatureHumidity();
-
-    }; // class
-
-} // Namespace
-
-#endif //GREENHOUSE_PWM_H
+#endif
