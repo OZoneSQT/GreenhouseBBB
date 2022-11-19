@@ -119,7 +119,7 @@ int main(int argc, char **argv) {
             if (argv[2] == "on")
             {
                 greenhouse::heaterAdapter heater;
-                servo.on();
+                heater.on();
             }
             else if (argv[2] == "off")
             {
