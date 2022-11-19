@@ -34,9 +34,9 @@
 #include<stdio.h>
 #include<iomanip>
 #include<unistd.h>
-#include<sys/ioctl.h>
-#include<linux/i2c.h>
-#include<linux/i2c-dev.h>
+#include</usr/include/linux/ioctl.h>
+#include</usr/include/linux/i2c.h>
+#include</usr/include/linux/i2c-dev.h>
 using namespace std;
 
 #define HEX(x) setw(2) << setfill('0') << hex << (int)(x)
