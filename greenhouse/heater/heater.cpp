@@ -21,3 +21,25 @@ void heater::turnOffHeater()
     fs << 0;
     fs.close();
 }
+
+// Read the status of the heater: on or off
+void heater::readHeaterStatus()
+{
+    struct stat st;
+    if (stat("/sys/class/gpio/gpio50", &st) == 0)
+    {
+        std::string val = readFile("/sys/class/gpio/gpio50/value");
+        if(val[0] == '1')
+        {
+            std::cout << "Heater:      on" << "    " << std::endl;
+        }
+        else
+        {
+            std::cout << "Heater:      off" << "    " << std::endl;
+        }
+    }
+    else
+    {
+        std::cout << "Heater:      off" << "    " << std::endl;
+    }
+}

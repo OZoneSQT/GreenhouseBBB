@@ -12,6 +12,8 @@ namespace greenhouse {
 #define LDR_PATH "/sys/bus/iio/devices/iio:device0/in_voltage"
 #define ADC_PIN 0 // P9_39 / AIN0
 
+#include "../settings.h"
+
     class ldr {
 
     public:
@@ -19,7 +21,7 @@ namespace greenhouse {
 
     private:
         float mapVoltsToPercentage(unsigned int value);
-        void readAnalog(int adcPin);
+        void readAnalog();
 
     public:
         ldr();

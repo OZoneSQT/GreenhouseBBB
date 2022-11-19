@@ -7,6 +7,7 @@
 #ifndef GREENHOUSE_PWM_H
 #define GREENHOUSE_PWM_H
 
+#include "../settings.h"
 #include<iostream>
 #include<fstream>
 #include<string>
@@ -15,6 +16,7 @@
 namespace greenhouse {
 
     class pwm {
+
     public:
         pwm()
         {

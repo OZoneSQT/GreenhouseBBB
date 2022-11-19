@@ -7,6 +7,7 @@
 #ifndef GREENHOUSE_HEATER_H
 #define GREENHOUSE_HEATER_H
 
+#include "../settings.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -37,7 +38,7 @@ public:
 
     void turnOnHeater();
     void turnOffHeater();
-    void isHeaterOn();
+    void readHeaterStatus();
 
 private:
     std::fstream fs;

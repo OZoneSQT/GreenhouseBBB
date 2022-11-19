@@ -7,6 +7,7 @@
 #ifndef GREENHOUSE_HIH8120_H
 #define GREENHOUSE_HIH8120_H
 
+#include "../settings.h"
 #include "../I2CDevice.h"
 
 namespace greenhouse {
