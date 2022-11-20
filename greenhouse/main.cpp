@@ -158,7 +158,7 @@ int main(int argc, char **argv) {
         // pwm, light
         else if(std::string(argv[1]) == "setLedLight")
         {
-            lightSetIntensity(argv[2]);
+            lightSetIntensity(atoi(argv[2]));
         }
         else if(std::string(argv[1]) == "offLedLight")
         {
