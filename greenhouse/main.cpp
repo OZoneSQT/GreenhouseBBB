@@ -26,9 +26,90 @@ std::string readFile(std::string path) {
     return data;
 }
 
-//TODO https://www.positioniseverything.net/cpp-undefined-reference/,
-// Look at greenhouse example, call Derived methods, from a method instead of main()
+//TODO https://www.positioniseverything.net/cpp-undefined-reference/
 
+void temperatureHumidity()
+{
+    greenhouse::temperatureHumidityAdapter adapter;
+    adapter.printTemperatureAndHumidity();
+}
+
+void temperature()
+{
+    greenhouse::temperatureHumidityAdapter adapter;
+    adapter.printTemperature();
+}
+
+void humidity()
+{
+    greenhouse::temperatureHumidityAdapter adapter;
+    adapter.printHumidity();
+}
+
+void ldrLevel() {
+    greenhouse::ldrAdapter adapter;
+    adapter.printLightLevel();
+}
+
+void lightSetIntensity(int i)
+{
+    greenhouse::lightAdapter adapter;
+    adapter.controlLightIntensity(i);
+}
+
+void lightOff()
+{
+    greenhouse::lightAdapter adapter;
+    adapter.controlLightIntensity(0);
+}
+
+void lightIntensity()
+{
+    greenhouse::lightAdapter adapter;
+    adapter.readLightIntensity();
+}
+
+void windowOpen()
+{
+    greenhouse::servoAdapter adapter;
+    adapter.openWindow();
+}
+
+void windowHalf()
+{
+    greenhouse::servoAdapter adapter;
+    adapter.halfOpenWindow();
+}
+
+void windowClose()
+{
+    greenhouse::servoAdapter adapter;
+    adapter.closeWindow();
+}
+
+void windowStatus()
+{
+    greenhouse::servoAdapter adapter;
+    adapter.readWindowPos();
+}
+
+void heatOn()
+{
+    greenhouse::heaterAdapter adapter;
+    adapter.on();
+}
+
+void heatOff()
+{
+    greenhouse::heaterAdapter heaterAdapter;
+    heaterAdapter.off();
+}
+
+void heatStatus()
+{
+    greenhouse::heaterAdapter adapter;
+    adapter.isRunning();
+}
 
 int main(int argc, char **argv) {
     //Check that there are enough variables
@@ -46,6 +127,7 @@ int main(int argc, char **argv) {
                       << "readHumidity - Prints current humidity (RH%)in greenhouse." << std::endl
                       << "readLightLevel - Prints current light level in greenhouse." << std::endl
                       << "setLedLight - controls led light intensity. Params from 0 to 100 ." << std::endl
+                      << "offLedLight - controls led light intensity. Params from 0 to 100 ." << std::endl
                       << "readLedLight - Prints led light intensity. From 0% to 100%" << std::endl
                       << "setWindowStatus - controls window in greenhouse. Params open, half open or close ." << std::endl
                       << "readWindow - reads position,open, half open or close ." << std::endl
@@ -57,41 +139,33 @@ int main(int argc, char **argv) {
         // hih8120
         else if (std::string(argv[1]) == "readTempAndHumidity")
         {
-            // undefined reference
-            greenhouse::temperatureHumidityAdapter adapter;
-            adapter.printTemperatureAndHumidity();
+            temperatureHumidity();
         }
         else if (std::string(argv[1]) == "readTemp") {
-            // undefined reference
-            greenhouse::temperatureHumidityAdapter adapter;
-            adapter.printTemperature();
+            temperature();
         }
         else if (std::string(argv[1]) == "readHumidity")
         {
-            // undefined reference
-            greenhouse::temperatureHumidityAdapter adapter;
-            adapter.printHumidity();
+            humidity();
         }
 
         // ldr
         else if (std::string(argv[1]) == "readLightLevel")
         {
-            // undefined reference
-            greenhouse::ldrAdapter adapter;
-            adapter.printLightLevel();
+            ldrLevel();
         }
 
         // pwm, light
         else if(std::string(argv[1]) == "setLedLight")
         {
-            // undefined reference
-            greenhouse::lightAdapter adapter;
-            adapter.controlLightIntensity(atoi(argv[2]));
+            lightSetIntensity(argv[2]);
+        }
+        else if(std::string(argv[1]) == "offLedLight")
+        {
+            lightOff();
         }
         else if (std::string(argv[1]) == "readLedLight") {
-            // undefined reference
-            greenhouse::lightAdapter adapter;
-            adapter.readLightIntensity();
+            lightIntensity();
         }
 
         // pwm, servo
@@ -99,21 +173,15 @@ int main(int argc, char **argv) {
         {
             if (argv[2] == "open")
             {
-                // undefined reference
-                greenhouse::servoAdapter adapter;
-                adapter.openWindow();
+                windowOpen();
             }
             else if (argv[2] == "half")
             {
-                // undefined reference
-                greenhouse::servoAdapter adapter;
-                adapter.halfOpenWindow();
+                windowHalf();
             }
             else if (argv[2] == "close")
             {
-                // undefined reference
-                greenhouse::servoAdapter adapter;
-                adapter.closeWindow();
+                windowClose();
             }
             else
             {
@@ -122,9 +190,7 @@ int main(int argc, char **argv) {
         }
         else if(std::string(argv[1]) == "readWindow")
         {
-            // undefined reference
-            greenhouse::servoAdapter adapter;
-            adapter.readWindowPos();
+            windowStatus();
         }
 
         // heater
@@ -132,15 +198,11 @@ int main(int argc, char **argv) {
         {
             if (argv[2] == "on")
             {
-                // undefined reference
-                greenhouse::heaterAdapter adapter;
-                adapter.on();
+                heatOn();
             }
             else if (argv[2] == "off")
             {
-                // undefined reference
-                greenhouse::heaterAdapter heaterAdapter;
-                heaterAdapter.off();
+                heatOff();
             }
             else
             {
@@ -149,9 +211,7 @@ int main(int argc, char **argv) {
         }
         else if (std::string(argv[1]) == "readHeater")
         {
-            // undefined reference
-            greenhouse::heaterAdapter::heaterAdapter() adapter;
-            adapter.isRunning();
+            heatStatus();
         }
 
         else

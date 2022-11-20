@@ -14,7 +14,7 @@ namespace greenhouse {
     private:
 
     public:
-        ldrAdapter();
+        ldrAdapter() {}
         void printLightLevel();
     };
 

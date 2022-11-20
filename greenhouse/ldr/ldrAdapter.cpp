@@ -9,8 +9,6 @@
 
 namespace greenhouse {
 
-    ldrAdapter::ldrAdapter() {}
-
     /**
      * @brief Prints light level from reading the light depended resistor
      */

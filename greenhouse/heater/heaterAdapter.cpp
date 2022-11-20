@@ -9,8 +9,6 @@
 
 namespace greenhouse {
 
-    heaterAdapter::heaterAdapter() {}
-
     /**
      * @brief Set heater to "on"
      */
