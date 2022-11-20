@@ -21,8 +21,8 @@ namespace greenhouse {
     // P9_4	                3.3V	    White
     // P9_19	  gpio13    SDA	        Yellow
     // P9_20	  gpio12    SDL	        Green
-    #define HIH8120_ADDRESS 0x53
-
+    // #define HIH8120_ADDRESS 0x53
+    #define ADDR 0x27
 
     // Light measurement with ADC
     // P9_1	                GND	        Black

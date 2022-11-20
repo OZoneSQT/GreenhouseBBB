@@ -14,6 +14,7 @@ namespace greenhouse {
     private:
 
     public:
+        temperatureHumidityAdapter() {}
         void printTemperatureAndHumidity();
         void printTemperature();
         void printHumidity();

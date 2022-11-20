@@ -14,6 +14,7 @@ namespace greenhouse {
     private:
 
     public:
+        heaterAdapter();
         void on();
         void off();
         void isRunning();

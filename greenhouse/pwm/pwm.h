@@ -20,8 +20,8 @@ namespace greenhouse {
     public:
         pwm()
         {
-            system(PWM_LED_PIN); // LED
-            system(PWM_LED_SERVO); // Servo motor
+            system(PWM_LED_PIN);    // LED
+            system(PWM_LED_SERVO);  // Servo motor
         }
 
         void send_pwm(int duty_cycle, int period, int channel);

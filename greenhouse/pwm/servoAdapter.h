@@ -7,6 +7,11 @@
 #ifndef GREENHOUSEBBB_SERVOADAPTER_H
 #define GREENHOUSEBBB_SERVOADAPTER_H
 
+#include<iostream>
+#include<fstream>
+#include<string>
+#include<stdlib.h>
+
 namespace greenhouse {
     class servoAdapter {
 
@@ -14,10 +19,11 @@ namespace greenhouse {
         void controlServo(std::string i);
 
     public:
-        openWindow();
-        halfOpenWindow();
-        closeWindow();
-        readWindowPos();
+        servoAdapter() {}
+        void openWindow();
+        void halfOpenWindow();
+        void closeWindow();
+        void readWindowPos();
 
     };
 }

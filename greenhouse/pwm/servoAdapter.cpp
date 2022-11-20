@@ -9,8 +9,6 @@
 
 namespace greenhouse {
 
-
-
     void servoAdapter::openWindow() {
         controlServo("open");
     }

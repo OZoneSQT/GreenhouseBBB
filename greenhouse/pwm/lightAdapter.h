@@ -13,6 +13,7 @@ namespace greenhouse {
     private:
 
     public:
+        lightAdapter() {}
         void controlLightIntensity(int i);
         void readLightIntensity();
 

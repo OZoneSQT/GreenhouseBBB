@@ -9,8 +9,6 @@
 
 namespace greenhouse {
 
-#define ADDR 0x27   //I2C address of hih8120 sensor
-
     /**
      * @brief Read temperature and humidity form hih8180.
      */
