@@ -22,17 +22,16 @@ public:
         struct stat st;
 
         //Check if gpio49 / P9_23 is initializes
-        if(!stat("/sys/class/gpio/gpio" + HEATER_PIN,&st) == 0)
+        if(!stat("/sys/class/gpio/gpio49",&st) == 0)
         {
             //Create the file
             fs.open("/sys/class/gpio/export", std::fstream::out);
             fs << 49;
-            fs << HEATER_PIN;
             fs.close();
         }
 
         // Set output
-        fs.open("/sys/class/gpio/gpio" + HEATER_PIN + "/direction", std::fstream::out);
+        fs.open("/sys/class/gpio/gpio49/direction", std::fstream::out);
         fs << "out";
         fs.close();
     }

@@ -4,11 +4,11 @@
  * @date 18-11-2022
  */
 
-#include "hih8120/temperatureHumidityAdapter.h"
-#include "ldr/ldrAdapter.h"
-#include "pwm/lightAdapter.h"
-#include "pwm/servoAdapter.h"
-#include "heater/heaterAdapter.h"
+#include "settings.h"
+#include "hih8120/hih8120.h"
+#include "ldr/ldr.h"
+#include "pwm/pwm.h"
+#include "heater/heater.h"
 #include <iostream>
 
 /**
@@ -26,88 +26,167 @@ std::string readFile(std::string path) {
     return data;
 }
 
-void temperatureHumidity()
-{
-    greenhouse::temperatureHumidityAdapter adapter;
-    adapter.printTemperatureAndHumidity();
-}
+    /**
+     * @brief Read temperature and humidity form hih8180.
+     */
+    void temperatureHumidity()
+    {
+        greenhouse::hih8120 hih8120(2, HIH8120_ADDRESS);
+        hih8120.readCurrentTemperatureHumidity();
 
-void temperature()
-{
-    greenhouse::temperatureHumidityAdapter adapter;
-    adapter.printTemperature();
-}
+        std::cout << "Temperature: " << hih8120.temperature << "     " << std::endl;
+        std::cout << "Humidity:    " << hih8120.humidity << "     " << std::endl;
+    }
 
-void humidity()
-{
-    greenhouse::temperatureHumidityAdapter adapter;
-    adapter.printHumidity();
-}
+    /**
+     * @brief Read temperature form hih8180.
+     */
+    void temperature()
+    {
+        greenhouse::hih8120 hih8120(2, HIH8120_ADDRESS);
+        hih8120.readCurrentTemperatureHumidity();
 
-void ldrLevel() {
-    greenhouse::ldrAdapter adapter;
-    adapter.printLightLevel();
-}
+        std::cout << "Temperature: " << hih8120.temperature << "     " << std::endl;
+    }
 
-void lightSetIntensity(int i)
-{
-    greenhouse::lightAdapter adapter;
-    adapter.controlLightIntensity(i);
-}
+    /**
+     * @brief Read humidity form hih8180.
+     */
+    void humidity()
+    {
+        greenhouse::hih8120 hih8120(2, HIH8120_ADDRESS);
+        hih8120.readCurrentTemperatureHumidity();
 
-void lightOff()
-{
-    greenhouse::lightAdapter adapter;
-    adapter.controlLightIntensity(0);
-}
+        std::cout << "Humidity:    " << hih8120.humidity << "     " << std::endl;
+    }
 
-void lightIntensity()
-{
-    greenhouse::lightAdapter adapter;
-    adapter.readLightIntensity();
-}
 
-void windowOpen()
-{
-    greenhouse::servoAdapter adapter;
-    adapter.openWindow();
-}
+    /**
+     * @brief Prints light level from reading the light depended resistor
+     */
+    void ldrLevel() {
+        greenhouse::ldr ldr;
+        ldr.readCurrentLightLevel();
 
-void windowHalf()
-{
-    greenhouse::servoAdapter adapter;
-    adapter.halfOpenWindow();
-}
+        std::cout << "Light level: " << ldr.lightLevel << "     " << std::endl;
+    }
 
-void windowClose()
-{
-    greenhouse::servoAdapter adapter;
-    adapter.closeWindow();
-}
 
-void windowStatus()
-{
-    greenhouse::servoAdapter adapter;
-    adapter.readWindowPos();
-}
+    /**
+    * @brief Control the light intensity of the led light
+    *
+    * @param i 0-100 integer value
+    */
+    void lightSetIntensity(int i)
+    {
+        greenhouse::pwm led;
 
-void heatOn()
-{
-    greenhouse::heaterAdapter adapter;
-    adapter.on();
-}
+        led.send_pwm_percentage(i, 20000000, PWM_CHANNEL_A);
+    }
 
-void heatOff()
-{
-    greenhouse::heaterAdapter heaterAdapter;
-    heaterAdapter.off();
-}
+    /**
+     * @brief Sets the light intensity of the led light to 0
+     */
+    void lightOff()
+    {
+        greenhouse::pwm led;
 
-void heatStatus()
-{
-    greenhouse::heaterAdapter adapter;
-    adapter.isRunning();
-}
+        led.send_pwm_percentage(0, 20000000, PWM_CHANNEL_A);
+    }
+
+    /**
+     * @brief Read the percentage of power going to led lamp
+     *
+     * Read directly form a file that stores the duty_cycle
+     * The duty cycle is then divided by the period to get percentage
+     */
+    void lightIntensity()
+    {
+        std::string lightDuty = readFile("/sys/class/pwm/pwmchip1/pwm-1:1/duty_cycle");
+        std::cout << "Led light:   " + std::to_string(atoi(lightDuty.c_str()) / 200000)<< "     " << std::endl;
+    }
+
+
+    /**
+     * @brief Sets the position of a window by sending a pwm pulse to servo motor
+     * value == 2000000 Window is open
+     */
+    void windowOpen()
+    {
+        greenhouse::pwm servo;
+        servo.send_pwm(2000000, 20000000, PWM_CHANNEL_B);
+    }
+
+    /**
+     * @brief Sets the position of a window by sending a pwm pulse to servo motor
+     * value == 1500000 Window is half open
+     */
+    void windowHalf()
+    {
+        greenhouse::pwm servo;
+        servo.send_pwm(1500000, 20000000, PWM_CHANNEL_B);
+    }
+
+    /**
+     * @brief Sets the position of a window by sending a pwm pulse to servo motor
+     * value == 1000000 Window is closed
+     */
+    void windowClose()
+    {
+        greenhouse::pwm servo;
+        servo.send_pwm(1000000, 20000000, PWM_CHANNEL_B);
+    }
+
+    /**
+     * @brief Read the position of a window by reading pwm value of servo motor
+     *
+     * Reads a file:
+     * value == 2000000 Window is open
+     * value == 1500000 Window is half open
+     * value == 1000000 Window is closed
+     */
+    void windowStatus()
+    {
+        std::string wpos = readFile("/sys/class/pwm/pwmchip1/pwm-1:0/duty_cycle");
+        if (wpos.compare("2000000") == 0) {
+            std::cout << "Window:      open" << "     " << std::endl;
+        } else if (wpos.compare("1500000") == 0) {
+            std::cout << "Window:      half open" << "     " << std::endl;
+        } else if (wpos.compare("1000000") == 0) {
+            std::cout << "Window:      closed" << "     " << std::endl;
+        } else {
+            std::cout << "error reading window pos" << std::endl;
+        }
+    }
+
+
+    /**
+     * @brief Set heater to "on"
+     */
+    void heatOn()
+    {
+        heater heater;
+        heater.turnOnHeater();
+    }
+
+    /**
+     * @brief Set heater to "off"
+     */
+    void heatOff()
+    {
+        heater heater;
+        heater.turnOffHeater();
+    }
+
+    /**
+     * @brief Read the status of the heater: on or off
+     */
+    void heatStatus()
+    {
+        heater heater;
+        heater.readHeaterStatus();
+    }
+
 
 int main(int argc, char **argv) {
     //Check that there are enough variables
@@ -124,13 +203,13 @@ int main(int argc, char **argv) {
                       << "readTemp - Prints current temperature (C) in greenhouse." << std::endl
                       << "readHumidity - Prints current humidity (RH%)in greenhouse." << std::endl
                       << "readLightLevel - Prints current light level in greenhouse." << std::endl
-                      << "setLedLight - controls led light intensity. Params from 0 to 100 ." << std::endl
-                      << "offLedLight - controls led light intensity. Params from 0 to 100 ." << std::endl
+                      << "setLedLight - controls led light intensity. Params from 0 to 100." << std::endl
+                      << "offLedLight - sets led light intensity to 0." << std::endl
                       << "readLedLight - Prints led light intensity. From 0% to 100%" << std::endl
-                      << "setWindowStatus - controls window in greenhouse. Params open, half open or close ." << std::endl
-                      << "readWindow - reads position,open, half open or close ." << std::endl
-                      << "readHeater - reads status,on or off ." << std::endl
-                      << "setHeaterStatus - controls heater in greenhouse.Params on or off ." << std::endl;
+                      << "setWindowStatus - controls window in greenhouse. Params open, half open or close." << std::endl
+                      << "readWindow - reads position,open, half open or close." << std::endl
+                      << "readHeater - reads status,on or off." << std::endl
+                      << "setHeaterStatus - controls heater in greenhouse.Params on or off." << std::endl;
 
         }
 
