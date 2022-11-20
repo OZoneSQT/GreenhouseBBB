@@ -1,13 +1,4 @@
 C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S E:\GitHub\GreenhouseBBB\greenhouse -B E:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug
 -- Configuring done
-CMake Error at CMakeLists.txt:6 (add_executable):
-  Cannot find source file:
-
-    servo/servo.cpp
-
-
-CMake Error at CMakeLists.txt:6 (add_executable):
-  No SOURCES given to target: greenhouse
-
-
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Generating done
+-- Build files have been written to: E:/GitHub/GreenhouseBBB/greenhouse/cmake-build-debug
