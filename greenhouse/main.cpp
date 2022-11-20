@@ -13,7 +13,7 @@
 
 /**
  * @brief Helper function to read text from files
- * 
+ *
  * @param path path to file.
  * @return std::string text from file
  */
@@ -34,7 +34,7 @@ int main(int argc, char **argv) {
     //Check that there are enough variables
     if (argc >= 2) {
 
-        //Check what functionality the user wants to 
+        //Check what functionality the user wants to
         //perform and directs it to the appropriate function
 
         //Functions either scan a peripheral and print the details to console or just read some file and print to console prints.
