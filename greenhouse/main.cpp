@@ -26,8 +26,6 @@ std::string readFile(std::string path) {
     return data;
 }
 
-//TODO https://www.positioniseverything.net/cpp-undefined-reference/
-
 void temperatureHumidity()
 {
     greenhouse::temperatureHumidityAdapter adapter;
