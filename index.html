@@ -9,6 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Greenhouse with BBB</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -19,16 +20,17 @@
     <p id="lightStatus">Light Intensity: </p>
 
     <p id="windowStatus">Windows Position: </p>
-    <button type="button" onclick="changeWindowState(1);">OPEN</button>
-    <button type="button" onclick="changeWindowState(0);">CLOSED</button>
+    <button type="button" class=button1_valid onclick="changeWindowState(1);">OPEN</button>
+    <button type="button" class=button1_valid onclick="changeWindowState(2);">HALF</button>
+    <button type="button" class=button1_valid onclick="changeWindowState(0);">CLOSED</button>
 
     <p id="heaterStatus">Heater Status: </p>
-    <button type="button" onclick="changeHeaterState(1);">ON</button>
-    <button type="button" onclick="changeHeaterState(0);">OFF</button>
+    <button type="button" class=button1_valid onclick="changeHeaterState(1);">ON</button>
+    <button type="button" class=button1_valid onclick="changeHeaterState(0);">OFF</button>
 
     <p id="ledLightStatus">Led Light Intensity: </p>
-    <input type="text" id="lightLevel" name="fname"><br><br>
-    <button type="button" onclick="changeStateLight();">Set value</button>
+    <input type="text" id="lightLevel" name="fname">
+    <button type="button" class=button1_valid onclick="changeStateLight();">Set value</button>
 
 
     <script src = "/socket.io/socket.io.js" ></script>
@@ -76,7 +78,9 @@
 
         // Handles user clicking window button open or close
         function changeWindowState(state){
-            if (state==1){
+            if (state==2) {
+                socket.emit('changeWindowState', '{"state":2}');
+            }else if (state==1){
                 socket.emit('changeWindowState', '{"state":1}');
             }else if (state==0){
                 socket.emit('changeWindowState', '{"state":0}');

@@ -154,6 +154,8 @@ async function handleChangeWindowState(socket, data) {
     
     if(newData.state == 1){
         command = "open"
+    } else if(newData.state == 2){
+        command = "half"
     } else {
         command = "close"
     }
