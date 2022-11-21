@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/GitHub/GreenhouseBBB/greenhouse/cmake-build-debug",
-		"source" : "E:/GitHub/GreenhouseBBB/greenhouse"
+		"build" : "D:/GitHub/GreenhouseBBB/greenhouse/cmake-build-debug",
+		"source" : "D:/GitHub/GreenhouseBBB/greenhouse"
 	},
 	"version" : 
 	{
