@@ -1,13 +1,31 @@
 /*STRUCTURE*/
 body {
     background-color: gainsboro;
+    overflow: hidden;
     margin: 10px;
+    height: 100%; 
 }
 
 p {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 115%;
 }
+
+img {
+    display: block;
+    margin-left: 200px;
+    margin-top: -520px;
+}
+
+/*CLASS*/
+.center {
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 
 /*BUTTON*/
 .button1_valid {
