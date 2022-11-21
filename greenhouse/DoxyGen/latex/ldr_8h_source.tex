@@ -1,0 +1,32 @@
+\hypertarget{ldr_8h_source}{}\doxysection{ldr.\+h}
+\label{ldr_8h_source}\index{ldr/ldr.h@{ldr/ldr.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef GREENHOUSE\_LDR\_H}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define GREENHOUSE\_LDR\_H}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacegreenhouse}{greenhouse}} \{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}../settings.h"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{keyword}{class }\mbox{\hyperlink{classgreenhouse_1_1ldr}{ldr}} \{}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \textcolor{keyword}{public}:}
+\DoxyCodeLine{17         \textcolor{keywordtype}{float} lightLevel;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keyword}{private}:}
+\DoxyCodeLine{20         \textcolor{keywordtype}{float} mapVoltsToPercentage(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{21         \textcolor{keywordtype}{void} readAnalog();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{public}:}
+\DoxyCodeLine{24         \mbox{\hyperlink{classgreenhouse_1_1ldr}{ldr}}();}
+\DoxyCodeLine{25         \textcolor{keywordtype}{void} readCurrentLightLevel();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,37 @@
+\hypertarget{pwm_8h_source}{}\doxysection{pwm.\+h}
+\label{pwm_8h_source}\index{pwm/pwm.h@{pwm/pwm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef GREENHOUSE\_PWM\_H}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define GREENHOUSE\_PWM\_H}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}../settings.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include<iostream>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include<fstream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include<string>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include<stdlib.h>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacegreenhouse}{greenhouse}} \{}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{keyword}{class }\mbox{\hyperlink{classgreenhouse_1_1pwm}{pwm}} \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keyword}{public}:}
+\DoxyCodeLine{21         \mbox{\hyperlink{classgreenhouse_1_1pwm}{pwm}}()}
+\DoxyCodeLine{22         \{}
+\DoxyCodeLine{23             system(PWM\_LED\_PIN);    \textcolor{comment}{// LED}}
+\DoxyCodeLine{24             system(PWM\_LED\_SERVO);  \textcolor{comment}{// Servo motor}}
+\DoxyCodeLine{25         \}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27         \textcolor{keywordtype}{void} \mbox{\hyperlink{classgreenhouse_1_1pwm_a4d3aa2a75adb91d80cf836e401023fe2}{send\_pwm}}(\textcolor{keywordtype}{int} duty\_cycle, \textcolor{keywordtype}{int} period, \textcolor{keywordtype}{int} channel);}
+\DoxyCodeLine{28         \textcolor{keywordtype}{void} send\_pwm\_percentage(\textcolor{keywordtype}{int} percent, \textcolor{keywordtype}{int} period, \textcolor{keywordtype}{int} channel);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keyword}{private}:}
+\DoxyCodeLine{31         std::fstream fs;}
+\DoxyCodeLine{32     \};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

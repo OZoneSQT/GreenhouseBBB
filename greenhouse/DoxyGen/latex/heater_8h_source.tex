@@ -1,0 +1,48 @@
+\hypertarget{heater_8h_source}{}\doxysection{heater.\+h}
+\label{heater_8h_source}\index{heater/heater.h@{heater/heater.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef GREENHOUSE\_HEATER\_H}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define GREENHOUSE\_HEATER\_H}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}../settings.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <sys/stat.h>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{classheater}{heater}}\{}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \mbox{\hyperlink{classheater}{heater}}()}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22         \textcolor{keyword}{struct }stat st;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24         \textcolor{comment}{//Check if gpio49 / P9\_23 is initializes}}
+\DoxyCodeLine{25         \textcolor{keywordflow}{if}(!stat(\textcolor{stringliteral}{"{}/sys/class/gpio/gpio49"{}},\&st) == 0)}
+\DoxyCodeLine{26         \{}
+\DoxyCodeLine{27             \textcolor{comment}{//Create the file}}
+\DoxyCodeLine{28             fs.open(\textcolor{stringliteral}{"{}/sys/class/gpio/export"{}}, std::fstream::out);}
+\DoxyCodeLine{29             fs << 49;}
+\DoxyCodeLine{30             fs.close();}
+\DoxyCodeLine{31         \}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         \textcolor{comment}{// Set output}}
+\DoxyCodeLine{34         fs.open(\textcolor{stringliteral}{"{}/sys/class/gpio/gpio49/direction"{}}, std::fstream::out);}
+\DoxyCodeLine{35         fs << \textcolor{stringliteral}{"{}out"{}};}
+\DoxyCodeLine{36         fs.close();}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{classheater_aa1b548d5c783698ea21ddf6b1a629c50}{turnOnHeater}}();}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} turnOffHeater();}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} readHeaterStatus();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{private}:}
+\DoxyCodeLine{44     std::fstream fs;}
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

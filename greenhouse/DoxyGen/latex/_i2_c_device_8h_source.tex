@@ -1,0 +1,64 @@
+\hypertarget{_i2_c_device_8h_source}{}\doxysection{I2\+CDevice.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * I2CDevice.h  Created on: 24 April 2016}}
+\DoxyCodeLine{3 \textcolor{comment}{ * by Erland Larsen, VIA University College}}
+\DoxyCodeLine{4 \textcolor{comment}{ * for the purpose of the course EOS I1.}}
+\DoxyCodeLine{5 \textcolor{comment}{ *}}
+\DoxyCodeLine{6 \textcolor{comment}{ * Adapted to from the original:}}
+\DoxyCodeLine{7 \textcolor{comment}{ * I2C.h  Created on: 17 May 2014}}
+\DoxyCodeLine{8 \textcolor{comment}{ * Copyright (c) 2014 Derek Molloy (www.derekmolloy.ie)}}
+\DoxyCodeLine{9 \textcolor{comment}{ * Made available for the book "{}Exploring BeagleBone"{}}}
+\DoxyCodeLine{10 \textcolor{comment}{ * See: www.exploringbeaglebone.com}}
+\DoxyCodeLine{11 \textcolor{comment}{ * Licensed under the EUPL V.1.1}}
+\DoxyCodeLine{12 \textcolor{comment}{ *}}
+\DoxyCodeLine{13 \textcolor{comment}{ * This Software is provided to You under the terms of the European}}
+\DoxyCodeLine{14 \textcolor{comment}{ * Union Public License (the "{}EUPL"{}) version 1.1 as published by the}}
+\DoxyCodeLine{15 \textcolor{comment}{ * European Union. Any use of this Software, other than as authorized}}
+\DoxyCodeLine{16 \textcolor{comment}{ * under this License is strictly prohibited (to the extent such use}}
+\DoxyCodeLine{17 \textcolor{comment}{ * is covered by a right of the copyright holder of this Software).}}
+\DoxyCodeLine{18 \textcolor{comment}{ *}}
+\DoxyCodeLine{19 \textcolor{comment}{ * This Software is provided under the License on an "{}AS IS"{} basis and}}
+\DoxyCodeLine{20 \textcolor{comment}{ * without warranties of any kind concerning the Software, including}}
+\DoxyCodeLine{21 \textcolor{comment}{ * without limitation merchantability, fitness for a particular purpose,}}
+\DoxyCodeLine{22 \textcolor{comment}{ * absence of defects or errors, accuracy, and non-\/infringement of}}
+\DoxyCodeLine{23 \textcolor{comment}{ * intellectual property rights other than copyright. This disclaimer}}
+\DoxyCodeLine{24 \textcolor{comment}{ * of warranty is an essential part of the License and a condition for}}
+\DoxyCodeLine{25 \textcolor{comment}{ * the grant of any rights to this Software.}}
+\DoxyCodeLine{26 \textcolor{comment}{ *}}
+\DoxyCodeLine{27 \textcolor{comment}{ * For more details, see http://www.derekmolloy.ie/}}
+\DoxyCodeLine{28 \textcolor{comment}{ */}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#ifndef I2C\_H\_}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define I2C\_H\_}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define BBB\_I2C\_0 "{}/dev/i2c-\/0"{}}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define BBB\_I2C\_1 "{}/dev/i2c-\/1"{}}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define BBB\_I2C\_2 "{}/dev/i2c-\/2"{}}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{namespace }exploringBB \{}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{43     \textcolor{keyword}{class }\mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device}{I2CDevice}}\{}
+\DoxyCodeLine{44     \textcolor{keyword}{private}:}
+\DoxyCodeLine{45         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bus;}
+\DoxyCodeLine{46         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} device;}
+\DoxyCodeLine{47         \textcolor{keywordtype}{int} file;}
+\DoxyCodeLine{48     \textcolor{keyword}{public}:}
+\DoxyCodeLine{49         \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device}{I2CDevice}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bus, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} device);}
+\DoxyCodeLine{50         \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_a172b55fd46b370af92e5d56a69b382a0}{open}}();}
+\DoxyCodeLine{51         \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_ac6a32210e659fc3df9afe1e86a6b7de2}{write}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} value);}
+\DoxyCodeLine{52         \textcolor{keyword}{virtual} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_a496d5708a117567113634820a0e6c1ff}{readRegister}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} registerAddress);}
+\DoxyCodeLine{53         \textcolor{keyword}{virtual} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_abba75f05c88fb613dea6dcbed9a389f6}{readRegisters}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} number, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} fromAddress=0);}
+\DoxyCodeLine{54         \textcolor{keyword}{virtual} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_aba4a05a465182b3ac1f7b6f7070051df}{readDevice}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} number);}
+\DoxyCodeLine{55         \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_a5ae91d7f111b4fb8574195b1d3cc6257}{writeRegister}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} registerAddress, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} value);}
+\DoxyCodeLine{56         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_a5ee01989fecde191317bd7d9e12b3d64}{debugDumpRegisters}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} number = 0xff);}
+\DoxyCodeLine{57         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_a16c4296d7eaacd400e09182ccad89c79}{close}}();}
+\DoxyCodeLine{58         \textcolor{keyword}{virtual} \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_af31325c29befa81e6660b611942575a4}{\string~I2CDevice}}();}
+\DoxyCodeLine{59     \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \} \textcolor{comment}{/* namespace exploringBB */}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* I2C\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
