@@ -19,6 +19,7 @@
     <p id="lightStatus">Light Intensity: </p>
 
     <p id="windowStatus">Windows Position: </p>
+    <button type="button" onclick="changeWindowState(2);">HALF</button>
     <button type="button" onclick="changeWindowState(1);">OPEN</button>
     <button type="button" onclick="changeWindowState(0);">CLOSED</button>
 
@@ -27,7 +28,7 @@
     <button type="button" onclick="changeHeaterState(0);">OFF</button>
 
     <p id="ledLightStatus">Led Light Intensity: </p>
-    <input type="text" id="lightLevel" name="fname"><br><br>
+    <input type="text" id="lightLevel" name="fname">
     <button type="button" onclick="changeStateLight();">Set value</button>
 
 
@@ -76,7 +77,9 @@
 
         // Handles user clicking window button open or close
         function changeWindowState(state){
-            if (state==1){
+            if (state==2) {
+                socket.emit('changeWindowState', '{"state":2}');
+            }else if (state==1){
                 socket.emit('changeWindowState', '{"state":1}');
             }else if (state==0){
                 socket.emit('changeWindowState', '{"state":0}');
