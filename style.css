@@ -1,0 +1,38 @@
+/*STRUCTURE*/
+body {
+    background-color: gainsboro;
+    margin: 10px;
+}
+
+p {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 115%;
+}
+
+/*BUTTON*/
+.button1_valid {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(30, 140, 250);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px rgb(100, 100, 100);
+    position: relative;
+    margin-right: auto;
+}
+  
+.button1_valid:hover {
+    background-color: rgb(20, 130, 240);
+}
+  
+.button1_valid:active {
+    background-color: rgb(20, 130, 240);
+    box-shadow: 0 2px rgb(31, 31, 31);
+    transform: translateY(2px);
+}
