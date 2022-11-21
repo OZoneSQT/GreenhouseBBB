@@ -33,6 +33,6 @@ p {
   
 .button1_valid:active {
     background-color: rgb(20, 130, 240);
-    box-shadow: 0 2px rgb(31, 31, 31);
+    box-shadow: 0 2px rgb(83, 83, 83);
     transform: translateY(2px);
 }

@@ -29,7 +29,7 @@
     <button type="button" class=button1_valid onclick="changeHeaterState(0);">OFF</button>
 
     <p id="ledLightStatus">Led Light Intensity: </p>
-    <input type="text" id="lightLevel" name="fname">
+    <input type="text" style="width: 178px" id="lightLevel" name="fname">
     <button type="button" class=button1_valid onclick="changeStateLight();">Set value</button>
 
 
@@ -72,7 +72,8 @@
                 const valueInt = parseInt(value);
                 socket.emit('changeStateLight', '{"state":'+ valueInt +'}');
             }else{
-                document.getElementById("lightLevel").value = "Enter valid integer from 0-100";
+                document.getElementById("lightLevel").value = null;
+                document.getElementById("lightLevel").placeholder = "Enter valid integer from 0-100";
             }
         }
 
