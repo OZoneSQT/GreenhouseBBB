@@ -9,6 +9,7 @@
 #include<fstream>
 #include<string>
 #include<sstream>
+#include <cmath>
 
 using namespace std;
 
@@ -44,7 +45,7 @@ namespace greenhouse {
     // update stored light level
     void ldr::readCurrentLightLevel()
     {
-        greenhouse::readAnalog(ADC_PIN);
+        ::greenhouse::readAnalog(ADC_PIN);
     }
 
 }

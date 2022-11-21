@@ -1,0 +1,174 @@
+\hypertarget{classexploring_b_b_1_1_i2_c_device}{}\doxysection{exploring\+BB\+::I2\+CDevice Class Reference}
+\label{classexploring_b_b_1_1_i2_c_device}\index{exploringBB::I2CDevice@{exploringBB::I2CDevice}}
+
+
+Generic I2C Device class that can be used to connect to any type of I2C device and read or write to its registers.  
+
+
+
+
+{\ttfamily \#include $<$I2\+CDevice.\+h$>$}
+
+Inheritance diagram for exploring\+BB\+::I2\+CDevice\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classexploring_b_b_1_1_i2_c_device}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_a88033a878e2ed5220edab4454b96ad81}{I2\+CDevice}} (unsigned int bus, unsigned int device)
+\item 
+virtual int \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_a172b55fd46b370af92e5d56a69b382a0}{open}} ()
+\item 
+virtual int \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_ac6a32210e659fc3df9afe1e86a6b7de2}{write}} (unsigned char value)
+\item 
+virtual unsigned char \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_a496d5708a117567113634820a0e6c1ff}{read\+Register}} (unsigned int register\+Address)
+\item 
+virtual unsigned char $\ast$ \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_abba75f05c88fb613dea6dcbed9a389f6}{read\+Registers}} (unsigned int number, unsigned int from\+Address=0)
+\item 
+virtual unsigned char $\ast$ \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_aba4a05a465182b3ac1f7b6f7070051df}{read\+Device}} (unsigned int number)
+\item 
+virtual int \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_a5ae91d7f111b4fb8574195b1d3cc6257}{write\+Register}} (unsigned int register\+Address, unsigned char value)
+\item 
+virtual void \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_a5ee01989fecde191317bd7d9e12b3d64}{debug\+Dump\+Registers}} (unsigned int number=0xff)
+\item 
+virtual void \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_a16c4296d7eaacd400e09182ccad89c79}{close}} ()
+\item 
+virtual \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device_af31325c29befa81e6660b611942575a4}{$\sim$\+I2\+CDevice}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic I2C Device class that can be used to connect to any type of I2C device and read or write to its registers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classexploring_b_b_1_1_i2_c_device_a88033a878e2ed5220edab4454b96ad81}\label{classexploring_b_b_1_1_i2_c_device_a88033a878e2ed5220edab4454b96ad81}} 
+\index{exploringBB::I2CDevice@{exploringBB::I2CDevice}!I2CDevice@{I2CDevice}}
+\index{I2CDevice@{I2CDevice}!exploringBB::I2CDevice@{exploringBB::I2CDevice}}
+\doxysubsubsection{\texorpdfstring{I2CDevice()}{I2CDevice()}}
+{\footnotesize\ttfamily exploring\+BB\+::\+I2\+CDevice\+::\+I2\+CDevice (\begin{DoxyParamCaption}\item[{unsigned int}]{bus,  }\item[{unsigned int}]{device }\end{DoxyParamCaption})}
+
+Constructor for the \mbox{\hyperlink{classexploring_b_b_1_1_i2_c_device}{I2\+CDevice}} class. It requires the bus number and device number. The constructor opens a file handle to the I2C device, which is destroyed when the destructor is called 
+\begin{DoxyParams}{Parameters}
+{\em bus} & The bus number. Usually 0 or 1 on the BBB \\
+\hline
+{\em device} & The device ID on the bus. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classexploring_b_b_1_1_i2_c_device_af31325c29befa81e6660b611942575a4}\label{classexploring_b_b_1_1_i2_c_device_af31325c29befa81e6660b611942575a4}} 
+\index{exploringBB::I2CDevice@{exploringBB::I2CDevice}!````~I2CDevice@{$\sim$I2CDevice}}
+\index{````~I2CDevice@{$\sim$I2CDevice}!exploringBB::I2CDevice@{exploringBB::I2CDevice}}
+\doxysubsubsection{\texorpdfstring{$\sim$I2CDevice()}{~I2CDevice()}}
+{\footnotesize\ttfamily exploring\+BB\+::\+I2\+CDevice\+::$\sim$\+I2\+CDevice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Closes the file on destruction, provided that it has not already been closed. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classexploring_b_b_1_1_i2_c_device_a16c4296d7eaacd400e09182ccad89c79}\label{classexploring_b_b_1_1_i2_c_device_a16c4296d7eaacd400e09182ccad89c79}} 
+\index{exploringBB::I2CDevice@{exploringBB::I2CDevice}!close@{close}}
+\index{close@{close}!exploringBB::I2CDevice@{exploringBB::I2CDevice}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void exploring\+BB\+::\+I2\+CDevice\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Close the file handles and sets a temporary state to -\/1. \mbox{\Hypertarget{classexploring_b_b_1_1_i2_c_device_a5ee01989fecde191317bd7d9e12b3d64}\label{classexploring_b_b_1_1_i2_c_device_a5ee01989fecde191317bd7d9e12b3d64}} 
+\index{exploringBB::I2CDevice@{exploringBB::I2CDevice}!debugDumpRegisters@{debugDumpRegisters}}
+\index{debugDumpRegisters@{debugDumpRegisters}!exploringBB::I2CDevice@{exploringBB::I2CDevice}}
+\doxysubsubsection{\texorpdfstring{debugDumpRegisters()}{debugDumpRegisters()}}
+{\footnotesize\ttfamily void exploring\+BB\+::\+I2\+CDevice\+::debug\+Dump\+Registers (\begin{DoxyParamCaption}\item[{unsigned int}]{number = {\ttfamily 0xff} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Method to dump the registers to the standard output. It inserts a return character after every 16 values and displays the results in hexadecimal to give a standard output using the HEX() macro that is defined at the top of this file. The standard output will stay in hexadecimal format, hence the call on the last like. 
+\begin{DoxyParams}{Parameters}
+{\em number} & the total number of registers to dump, defaults to 0xff \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classexploring_b_b_1_1_i2_c_device_a172b55fd46b370af92e5d56a69b382a0}\label{classexploring_b_b_1_1_i2_c_device_a172b55fd46b370af92e5d56a69b382a0}} 
+\index{exploringBB::I2CDevice@{exploringBB::I2CDevice}!open@{open}}
+\index{open@{open}!exploringBB::I2CDevice@{exploringBB::I2CDevice}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily int exploring\+BB\+::\+I2\+CDevice\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Open a connection to an I2C device \begin{DoxyReturn}{Returns}
+1 on failure to open to the bus or device, 0 on success. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classexploring_b_b_1_1_i2_c_device_aba4a05a465182b3ac1f7b6f7070051df}\label{classexploring_b_b_1_1_i2_c_device_aba4a05a465182b3ac1f7b6f7070051df}} 
+\index{exploringBB::I2CDevice@{exploringBB::I2CDevice}!readDevice@{readDevice}}
+\index{readDevice@{readDevice}!exploringBB::I2CDevice@{exploringBB::I2CDevice}}
+\doxysubsubsection{\texorpdfstring{readDevice()}{readDevice()}}
+{\footnotesize\ttfamily unsigned char $\ast$ exploring\+BB\+::\+I2\+CDevice\+::read\+Device (\begin{DoxyParamCaption}\item[{unsigned int}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Method to read a number of bytes from a single device without registers. 
+\begin{DoxyParams}{Parameters}
+{\em number} & the number of registers to read from the device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer of type unsigned char$\ast$ that points to the first element in the block of bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classexploring_b_b_1_1_i2_c_device_a496d5708a117567113634820a0e6c1ff}\label{classexploring_b_b_1_1_i2_c_device_a496d5708a117567113634820a0e6c1ff}} 
+\index{exploringBB::I2CDevice@{exploringBB::I2CDevice}!readRegister@{readRegister}}
+\index{readRegister@{readRegister}!exploringBB::I2CDevice@{exploringBB::I2CDevice}}
+\doxysubsubsection{\texorpdfstring{readRegister()}{readRegister()}}
+{\footnotesize\ttfamily unsigned char exploring\+BB\+::\+I2\+CDevice\+::read\+Register (\begin{DoxyParamCaption}\item[{unsigned int}]{register\+Address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Read a single register value from the address on the device. 
+\begin{DoxyParams}{Parameters}
+{\em register\+Address} & the address to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the byte value at the register address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classexploring_b_b_1_1_i2_c_device_abba75f05c88fb613dea6dcbed9a389f6}\label{classexploring_b_b_1_1_i2_c_device_abba75f05c88fb613dea6dcbed9a389f6}} 
+\index{exploringBB::I2CDevice@{exploringBB::I2CDevice}!readRegisters@{readRegisters}}
+\index{readRegisters@{readRegisters}!exploringBB::I2CDevice@{exploringBB::I2CDevice}}
+\doxysubsubsection{\texorpdfstring{readRegisters()}{readRegisters()}}
+{\footnotesize\ttfamily unsigned char $\ast$ exploring\+BB\+::\+I2\+CDevice\+::read\+Registers (\begin{DoxyParamCaption}\item[{unsigned int}]{number,  }\item[{unsigned int}]{from\+Address = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Method to read a number of registers from a single device. This is much more efficient than reading the registers individually. The from address is the starting address to read from, which defaults to 0x00. 
+\begin{DoxyParams}{Parameters}
+{\em number} & the number of registers to read from the device \\
+\hline
+{\em from\+Address} & the starting address to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer of type unsigned char$\ast$ that points to the first element in the block of registers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classexploring_b_b_1_1_i2_c_device_ac6a32210e659fc3df9afe1e86a6b7de2}\label{classexploring_b_b_1_1_i2_c_device_ac6a32210e659fc3df9afe1e86a6b7de2}} 
+\index{exploringBB::I2CDevice@{exploringBB::I2CDevice}!write@{write}}
+\index{write@{write}!exploringBB::I2CDevice@{exploringBB::I2CDevice}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily int exploring\+BB\+::\+I2\+CDevice\+::write (\begin{DoxyParamCaption}\item[{unsigned char}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Write a single value to the I2C device. Used to set up the device to read from a particular address. 
+\begin{DoxyParams}{Parameters}
+{\em value} & the value to write to the device \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on failure to write, 0 on success. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classexploring_b_b_1_1_i2_c_device_a5ae91d7f111b4fb8574195b1d3cc6257}\label{classexploring_b_b_1_1_i2_c_device_a5ae91d7f111b4fb8574195b1d3cc6257}} 
+\index{exploringBB::I2CDevice@{exploringBB::I2CDevice}!writeRegister@{writeRegister}}
+\index{writeRegister@{writeRegister}!exploringBB::I2CDevice@{exploringBB::I2CDevice}}
+\doxysubsubsection{\texorpdfstring{writeRegister()}{writeRegister()}}
+{\footnotesize\ttfamily int exploring\+BB\+::\+I2\+CDevice\+::write\+Register (\begin{DoxyParamCaption}\item[{unsigned int}]{register\+Address,  }\item[{unsigned char}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Write a single byte value to a single register. 
+\begin{DoxyParams}{Parameters}
+{\em register\+Address} & The register address \\
+\hline
+{\em value} & The value to be written to the register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on failure to write, 0 on success. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+I2\+CDevice.\+h\item 
+I2\+CDevice.\+cpp\end{DoxyCompactItemize}

@@ -6,7 +6,7 @@
 
 #include "pwm.h"
 
-void pwm::send_pwm(int duty_cycle, int period, int channel){
+void greenhouse::pwm::send_pwm(int duty_cycle, int period, int channel){
 
     // duty cycle
     fs.open(("/sys/class/pwm/pwmchip1/pwm-1:"+std::to_string(channel)+"/duty_cycle").c_str(), std::fstream::out);
@@ -26,7 +26,7 @@ void pwm::send_pwm(int duty_cycle, int period, int channel){
 
 // LED light
 // 200000 = 1% of period
-void pwm::send_pwm_percentage(int percent, int period, int channel)
+void greenhouse::pwm::send_pwm_percentage(int percent, int period, int channel)
 {
     send_pwm(percent * 200000, period, channel);
 }

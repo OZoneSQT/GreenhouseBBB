@@ -1,0 +1,54 @@
+\hypertarget{settings_8h_source}{}\doxysection{settings.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef GREENHOUSEBBB\_SETTINGS\_H}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define GREENHOUSEBBB\_SETTINGS\_H}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacegreenhouse}{greenhouse}} \{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{comment}{// Heater control with IO}}
+\DoxyCodeLine{13     \textcolor{comment}{// P9\_1                 GND         Black}}
+\DoxyCodeLine{14     \textcolor{comment}{// P9\_7                 5V          Red}}
+\DoxyCodeLine{15     \textcolor{comment}{// P9\_23     gpio49     IO          Purple}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{    \#define HEATER\_PIN "{}49"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{comment}{// HIH8120 Temperature and humidity, I2C}}
+\DoxyCodeLine{20     \textcolor{comment}{// P9\_1                 GND         Black}}
+\DoxyCodeLine{21     \textcolor{comment}{// P9\_4                 3.3V        White}}
+\DoxyCodeLine{22     \textcolor{comment}{// P9\_19      gpio13    SDA         Yellow}}
+\DoxyCodeLine{23     \textcolor{comment}{// P9\_20      gpio12    SDL         Green}}
+\DoxyCodeLine{24     \textcolor{comment}{// \#define HIH8120\_ADDRESS 0x53}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{    \#define HIH8120\_ADDRESS 0x27}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{// Light measurement with ADC}}
+\DoxyCodeLine{28     \textcolor{comment}{// P9\_1                 GND         Black}}
+\DoxyCodeLine{29     \textcolor{comment}{// P9\_7                 5V          Red}}
+\DoxyCodeLine{30     \textcolor{comment}{// P9\_32                1.8V ref.   Orange}}
+\DoxyCodeLine{31     \textcolor{comment}{// P9\_34                GND ADC     Black}}
+\DoxyCodeLine{32     \textcolor{comment}{// P9\_39      AIN0      ADC         Blue}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{    \#define ADC\_PIN\_PATH "{}/sys/bus/iio/devices/iio:device0/in\_voltage"{}}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{    \#define ADC\_PIN 0}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{comment}{// Light Control with PWM}}
+\DoxyCodeLine{38     \textcolor{comment}{// P9\_1                 GND         Black}}
+\DoxyCodeLine{39     \textcolor{comment}{// P9\_7                 sys 5V      Red}}
+\DoxyCodeLine{40     \textcolor{comment}{// P9\_22    gpio2       PMW         Brown}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{    \#define PWM\_LED\_PIN "{}config-\/pin P9\_22 pwm"{}}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{    \#define PWM\_CHANNEL\_B 0}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{comment}{// Servo motor control with PWM}}
+\DoxyCodeLine{46     \textcolor{comment}{//  P9\_1                GND         Black}}
+\DoxyCodeLine{47     \textcolor{comment}{//  P9\_7                5V          Red}}
+\DoxyCodeLine{48     \textcolor{comment}{//  P9\_21   gpio3       PMW         Gray}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{    \#define PWM\_LED\_SERVO "{}config-\/pin P9\_21 pwm"{}}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{    \#define PWM\_CHANNEL\_A 1}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

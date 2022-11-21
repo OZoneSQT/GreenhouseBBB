@@ -27,6 +27,7 @@
  * For more details, see http://www.derekmolloy.ie/
  */
 
+#include "settings.h"
 #include"I2CDevice.h"
 #include<iostream>
 #include<sstream>

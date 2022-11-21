@@ -52,10 +52,10 @@ RM = C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\GitHub\GreenhouseBBB\greenhouse
+CMAKE_SOURCE_DIR = E:\GitHub\GreenhouseBBB\greenhouse
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug
+CMAKE_BINARY_DIR = E:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/greenhouse.dir/depend.make
@@ -71,86 +71,86 @@ include CMakeFiles/greenhouse.dir/flags.make
 CMakeFiles/greenhouse.dir/main.cpp.obj: CMakeFiles/greenhouse.dir/flags.make
 CMakeFiles/greenhouse.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/greenhouse.dir/main.cpp.obj: CMakeFiles/greenhouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/greenhouse.dir/main.cpp.obj"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/greenhouse.dir/main.cpp.obj -MF CMakeFiles\greenhouse.dir\main.cpp.obj.d -o CMakeFiles\greenhouse.dir\main.cpp.obj -c D:\GitHub\GreenhouseBBB\greenhouse\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/greenhouse.dir/main.cpp.obj"
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/greenhouse.dir/main.cpp.obj -MF CMakeFiles\greenhouse.dir\main.cpp.obj.d -o CMakeFiles\greenhouse.dir\main.cpp.obj -c E:\GitHub\GreenhouseBBB\greenhouse\main.cpp
 
 CMakeFiles/greenhouse.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/greenhouse.dir/main.cpp.i"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\GitHub\GreenhouseBBB\greenhouse\main.cpp > CMakeFiles\greenhouse.dir\main.cpp.i
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\GitHub\GreenhouseBBB\greenhouse\main.cpp > CMakeFiles\greenhouse.dir\main.cpp.i
 
 CMakeFiles/greenhouse.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/greenhouse.dir/main.cpp.s"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\GitHub\GreenhouseBBB\greenhouse\main.cpp -o CMakeFiles\greenhouse.dir\main.cpp.s
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\GitHub\GreenhouseBBB\greenhouse\main.cpp -o CMakeFiles\greenhouse.dir\main.cpp.s
 
 CMakeFiles/greenhouse.dir/I2CDevice.cpp.obj: CMakeFiles/greenhouse.dir/flags.make
 CMakeFiles/greenhouse.dir/I2CDevice.cpp.obj: ../I2CDevice.cpp
 CMakeFiles/greenhouse.dir/I2CDevice.cpp.obj: CMakeFiles/greenhouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/greenhouse.dir/I2CDevice.cpp.obj"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/greenhouse.dir/I2CDevice.cpp.obj -MF CMakeFiles\greenhouse.dir\I2CDevice.cpp.obj.d -o CMakeFiles\greenhouse.dir\I2CDevice.cpp.obj -c D:\GitHub\GreenhouseBBB\greenhouse\I2CDevice.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/greenhouse.dir/I2CDevice.cpp.obj"
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/greenhouse.dir/I2CDevice.cpp.obj -MF CMakeFiles\greenhouse.dir\I2CDevice.cpp.obj.d -o CMakeFiles\greenhouse.dir\I2CDevice.cpp.obj -c E:\GitHub\GreenhouseBBB\greenhouse\I2CDevice.cpp
 
 CMakeFiles/greenhouse.dir/I2CDevice.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/greenhouse.dir/I2CDevice.cpp.i"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\GitHub\GreenhouseBBB\greenhouse\I2CDevice.cpp > CMakeFiles\greenhouse.dir\I2CDevice.cpp.i
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\GitHub\GreenhouseBBB\greenhouse\I2CDevice.cpp > CMakeFiles\greenhouse.dir\I2CDevice.cpp.i
 
 CMakeFiles/greenhouse.dir/I2CDevice.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/greenhouse.dir/I2CDevice.cpp.s"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\GitHub\GreenhouseBBB\greenhouse\I2CDevice.cpp -o CMakeFiles\greenhouse.dir\I2CDevice.cpp.s
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\GitHub\GreenhouseBBB\greenhouse\I2CDevice.cpp -o CMakeFiles\greenhouse.dir\I2CDevice.cpp.s
 
 CMakeFiles/greenhouse.dir/heater/heater.cpp.obj: CMakeFiles/greenhouse.dir/flags.make
 CMakeFiles/greenhouse.dir/heater/heater.cpp.obj: ../heater/heater.cpp
 CMakeFiles/greenhouse.dir/heater/heater.cpp.obj: CMakeFiles/greenhouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/greenhouse.dir/heater/heater.cpp.obj"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/greenhouse.dir/heater/heater.cpp.obj -MF CMakeFiles\greenhouse.dir\heater\heater.cpp.obj.d -o CMakeFiles\greenhouse.dir\heater\heater.cpp.obj -c D:\GitHub\GreenhouseBBB\greenhouse\heater\heater.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/greenhouse.dir/heater/heater.cpp.obj"
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/greenhouse.dir/heater/heater.cpp.obj -MF CMakeFiles\greenhouse.dir\heater\heater.cpp.obj.d -o CMakeFiles\greenhouse.dir\heater\heater.cpp.obj -c E:\GitHub\GreenhouseBBB\greenhouse\heater\heater.cpp
 
 CMakeFiles/greenhouse.dir/heater/heater.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/greenhouse.dir/heater/heater.cpp.i"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\GitHub\GreenhouseBBB\greenhouse\heater\heater.cpp > CMakeFiles\greenhouse.dir\heater\heater.cpp.i
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\GitHub\GreenhouseBBB\greenhouse\heater\heater.cpp > CMakeFiles\greenhouse.dir\heater\heater.cpp.i
 
 CMakeFiles/greenhouse.dir/heater/heater.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/greenhouse.dir/heater/heater.cpp.s"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\GitHub\GreenhouseBBB\greenhouse\heater\heater.cpp -o CMakeFiles\greenhouse.dir\heater\heater.cpp.s
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\GitHub\GreenhouseBBB\greenhouse\heater\heater.cpp -o CMakeFiles\greenhouse.dir\heater\heater.cpp.s
 
 CMakeFiles/greenhouse.dir/ldr/ldr.cpp.obj: CMakeFiles/greenhouse.dir/flags.make
 CMakeFiles/greenhouse.dir/ldr/ldr.cpp.obj: ../ldr/ldr.cpp
 CMakeFiles/greenhouse.dir/ldr/ldr.cpp.obj: CMakeFiles/greenhouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/greenhouse.dir/ldr/ldr.cpp.obj"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/greenhouse.dir/ldr/ldr.cpp.obj -MF CMakeFiles\greenhouse.dir\ldr\ldr.cpp.obj.d -o CMakeFiles\greenhouse.dir\ldr\ldr.cpp.obj -c D:\GitHub\GreenhouseBBB\greenhouse\ldr\ldr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/greenhouse.dir/ldr/ldr.cpp.obj"
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/greenhouse.dir/ldr/ldr.cpp.obj -MF CMakeFiles\greenhouse.dir\ldr\ldr.cpp.obj.d -o CMakeFiles\greenhouse.dir\ldr\ldr.cpp.obj -c E:\GitHub\GreenhouseBBB\greenhouse\ldr\ldr.cpp
 
 CMakeFiles/greenhouse.dir/ldr/ldr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/greenhouse.dir/ldr/ldr.cpp.i"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\GitHub\GreenhouseBBB\greenhouse\ldr\ldr.cpp > CMakeFiles\greenhouse.dir\ldr\ldr.cpp.i
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\GitHub\GreenhouseBBB\greenhouse\ldr\ldr.cpp > CMakeFiles\greenhouse.dir\ldr\ldr.cpp.i
 
 CMakeFiles/greenhouse.dir/ldr/ldr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/greenhouse.dir/ldr/ldr.cpp.s"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\GitHub\GreenhouseBBB\greenhouse\ldr\ldr.cpp -o CMakeFiles\greenhouse.dir\ldr\ldr.cpp.s
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\GitHub\GreenhouseBBB\greenhouse\ldr\ldr.cpp -o CMakeFiles\greenhouse.dir\ldr\ldr.cpp.s
 
 CMakeFiles/greenhouse.dir/pwm/pwm.cpp.obj: CMakeFiles/greenhouse.dir/flags.make
 CMakeFiles/greenhouse.dir/pwm/pwm.cpp.obj: ../pwm/pwm.cpp
 CMakeFiles/greenhouse.dir/pwm/pwm.cpp.obj: CMakeFiles/greenhouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/greenhouse.dir/pwm/pwm.cpp.obj"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/greenhouse.dir/pwm/pwm.cpp.obj -MF CMakeFiles\greenhouse.dir\pwm\pwm.cpp.obj.d -o CMakeFiles\greenhouse.dir\pwm\pwm.cpp.obj -c D:\GitHub\GreenhouseBBB\greenhouse\pwm\pwm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/greenhouse.dir/pwm/pwm.cpp.obj"
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/greenhouse.dir/pwm/pwm.cpp.obj -MF CMakeFiles\greenhouse.dir\pwm\pwm.cpp.obj.d -o CMakeFiles\greenhouse.dir\pwm\pwm.cpp.obj -c E:\GitHub\GreenhouseBBB\greenhouse\pwm\pwm.cpp
 
 CMakeFiles/greenhouse.dir/pwm/pwm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/greenhouse.dir/pwm/pwm.cpp.i"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\GitHub\GreenhouseBBB\greenhouse\pwm\pwm.cpp > CMakeFiles\greenhouse.dir\pwm\pwm.cpp.i
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\GitHub\GreenhouseBBB\greenhouse\pwm\pwm.cpp > CMakeFiles\greenhouse.dir\pwm\pwm.cpp.i
 
 CMakeFiles/greenhouse.dir/pwm/pwm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/greenhouse.dir/pwm/pwm.cpp.s"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\GitHub\GreenhouseBBB\greenhouse\pwm\pwm.cpp -o CMakeFiles\greenhouse.dir\pwm\pwm.cpp.s
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\GitHub\GreenhouseBBB\greenhouse\pwm\pwm.cpp -o CMakeFiles\greenhouse.dir\pwm\pwm.cpp.s
 
 CMakeFiles/greenhouse.dir/hih8120/hih8120.cpp.obj: CMakeFiles/greenhouse.dir/flags.make
 CMakeFiles/greenhouse.dir/hih8120/hih8120.cpp.obj: ../hih8120/hih8120.cpp
 CMakeFiles/greenhouse.dir/hih8120/hih8120.cpp.obj: CMakeFiles/greenhouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/greenhouse.dir/hih8120/hih8120.cpp.obj"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/greenhouse.dir/hih8120/hih8120.cpp.obj -MF CMakeFiles\greenhouse.dir\hih8120\hih8120.cpp.obj.d -o CMakeFiles\greenhouse.dir\hih8120\hih8120.cpp.obj -c D:\GitHub\GreenhouseBBB\greenhouse\hih8120\hih8120.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/greenhouse.dir/hih8120/hih8120.cpp.obj"
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/greenhouse.dir/hih8120/hih8120.cpp.obj -MF CMakeFiles\greenhouse.dir\hih8120\hih8120.cpp.obj.d -o CMakeFiles\greenhouse.dir\hih8120\hih8120.cpp.obj -c E:\GitHub\GreenhouseBBB\greenhouse\hih8120\hih8120.cpp
 
 CMakeFiles/greenhouse.dir/hih8120/hih8120.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/greenhouse.dir/hih8120/hih8120.cpp.i"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\GitHub\GreenhouseBBB\greenhouse\hih8120\hih8120.cpp > CMakeFiles\greenhouse.dir\hih8120\hih8120.cpp.i
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\GitHub\GreenhouseBBB\greenhouse\hih8120\hih8120.cpp > CMakeFiles\greenhouse.dir\hih8120\hih8120.cpp.i
 
 CMakeFiles/greenhouse.dir/hih8120/hih8120.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/greenhouse.dir/hih8120/hih8120.cpp.s"
-	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\GitHub\GreenhouseBBB\greenhouse\hih8120\hih8120.cpp -o CMakeFiles\greenhouse.dir\hih8120\hih8120.cpp.s
+	C:\Users\skrue\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\GitHub\GreenhouseBBB\greenhouse\hih8120\hih8120.cpp -o CMakeFiles\greenhouse.dir\hih8120\hih8120.cpp.s
 
 # Object files for target greenhouse
 greenhouse_OBJECTS = \
@@ -174,7 +174,7 @@ greenhouse.exe: CMakeFiles/greenhouse.dir/build.make
 greenhouse.exe: CMakeFiles/greenhouse.dir/linklibs.rsp
 greenhouse.exe: CMakeFiles/greenhouse.dir/objects1.rsp
 greenhouse.exe: CMakeFiles/greenhouse.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable greenhouse.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable greenhouse.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\greenhouse.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -186,6 +186,6 @@ CMakeFiles/greenhouse.dir/clean:
 .PHONY : CMakeFiles/greenhouse.dir/clean
 
 CMakeFiles/greenhouse.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\GitHub\GreenhouseBBB\greenhouse D:\GitHub\GreenhouseBBB\greenhouse D:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug D:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug D:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles\greenhouse.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\GitHub\GreenhouseBBB\greenhouse E:\GitHub\GreenhouseBBB\greenhouse E:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug E:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug E:\GitHub\GreenhouseBBB\greenhouse\cmake-build-debug\CMakeFiles\greenhouse.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/greenhouse.dir/depend
 
