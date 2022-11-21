@@ -12,7 +12,7 @@
 echo *** Greenhouse compiler ***
 
 # Compile: Remember to put main.cpp last, to have dependence ready for main.cpp
-g++ heater/heater.cpp ldr/ldr.cpp pwm/pwm.cpp I2CDevice.cpp hih8120/hih8120.cpp main.cpp -o greenhouse
+g++ settings.h heater/heater.h heater/heater.cpp ldr/ldr.h ldr/ldr.cpp pwm/pwm.h pwm/pwm.cpp I2CDevice.h I2CDevice.cpp hih8120/hih8120.h hih8120/hih8120.cpp main.cpp -o greenhouse
 
 sleep 10 #Sleep script for 10 seconds
 echo *** Giving program to Greenhouse ***
