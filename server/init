@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# Authors:
+# Bastian Durand 239735
+# Michel Sommer 273966
+# Date: 2022-11-15
+#
+#
+
+echo *** Initilaize Greenhouse server ***
+
+sudo chmod a+rwx Server.js
+
+sleep 5 #Sleep script for 5 seconds
+echo *** Initilaize script for Greenhouse server is executed ***
