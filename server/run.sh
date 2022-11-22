@@ -9,7 +9,7 @@
 #
 
 echo *** Starting Greenhouse... ***
-#.Greenhouse #Run Greenhouse project / start server
+./greenhouse #Run Greenhouse project / start server
 node server.js
 sleep 10 #Sleep script for 10 seconds
-echo *** server is ready at port\: 26001 ***
+echo *** Greenhouse server is ready at port\: 26001 ***
