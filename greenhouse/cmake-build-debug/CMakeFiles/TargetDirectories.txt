@@ -1,3 +1,0 @@
-E:/GitHub/GreenhouseBBB/greenhouse/cmake-build-debug/CMakeFiles/greenhouse.dir
-E:/GitHub/GreenhouseBBB/greenhouse/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/GitHub/GreenhouseBBB/greenhouse/cmake-build-debug/CMakeFiles/rebuild_cache.dir
